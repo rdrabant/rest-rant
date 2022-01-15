@@ -38,7 +38,7 @@ router.delete('/places/:id', (req, res) => {
 })
 
 //POST		Create a rant (comment) about a particular place
-router.POST('/places/:id/rant', (req, res) => {
+router.post('/places/:id/rant', (req, res) => {
     //res.send('GET /places')
 })
 

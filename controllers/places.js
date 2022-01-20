@@ -1,8 +1,23 @@
 const router = require('express').Router()
 
-//GET	/places	Places index page
+// GET /places
+//this threw me off. the assignment says app.get
 router.get('/', (req, res) => {
-    res.send('GET /places')
+    let places = [{
+        name: 'H-Thai-ML',
+        city: 'Seattle',
+        state: 'WA',
+        cuisines: 'Thai, Pan-Asian',
+        pic: 'http://placekitten.com/250/250'
+      }, {
+        name: 'Coding Cat Cafe',
+        city: 'Phoenix',
+        state: 'AZ',
+        cuisines: 'Coffee, Bakery',
+        pic: 'http://placekitten.com/250/250'
+      }]
+      
+    res.render('places/index', { places })
 })
 
 //POST	/places	Create new place
